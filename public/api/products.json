@@ -1,0 +1,24 @@
+[
+    {   
+        "id": 1,
+        "title": "Creatina Monohidratada Star Nutrition 300 Gr\"",
+        "local_price": 420,
+        "online_price": 299,
+        "detalles":"hola\"",
+        "img": "https://http2.mlstatic.com/D_NQ_NP_604670-MLA84034764059_042025-O.webp"
+    },
+    {   
+        "id": 2,
+        "title": "smart tv 45\"",
+        "local_price": 500,
+        "online_price": 400,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_890697-MLA82324582088_022025-O.webp"
+    },
+    {   
+        "id": 3,
+        "title": "smart tv 32\"",
+        "local_price": 330,
+        "online_price": 122,
+        "img": "https://http2.mlstatic.com/D_NQ_NP_890697-MLA82324582088_022025-O.webp"
+    }
+]
