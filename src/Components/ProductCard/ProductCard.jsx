@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./productCard.css";
+import "./ProductCard.css";
 
 
 const ProductCard = ({ linkMp,imgPrincipal, title, local_price, online_price, id }) => {
