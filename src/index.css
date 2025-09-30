@@ -415,5 +415,98 @@ html, body {
 }
 
 
+/* ====== 📱 EXTRA: MOBILE FIRST (celulares <576px) ====== */
+@media (max-width: 576px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  .header .wrap {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .hero .wrap {
+    padding: 50px 16px 30px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .hero-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .search {
+  flex-direction: column;
+  align-items: center; /* 🔹 centra los elementos */
+  gap: 10px;
+}
+.search input,
+.search .btn {
+  width: 100%; /* 🔹 ocupan todo el ancho */
+  max-width: 100%;
+}
+.search .btn {
+  text-align: center;
+}
+
+  /* Catálogo */
+  .grid, .catalogo-grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 16px;
+  }
+  .product-card img {
+    height: 120px;
+  }
+  .producto-card h2 {
+    font-size: 1rem;
+  }
+  .precio {
+    font-size: 1rem;
+  }
+
+  /* Contacto */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-card {
+    padding: 16px;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer img.social-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .footer img.valtrion-logo {
+    width: 60px;
+  }
+
+  /* Producto */
+  .product {
+    grid-template-columns: 1fr;
+  }
+  .product .title {
+    font-size: 1.3rem;
+  }
+  .product .price {
+    font-size: 1.4rem;
+  }
+}
+
 
 

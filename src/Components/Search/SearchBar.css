@@ -1,0 +1,104 @@
+.search-result-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.search-result-card:hover {
+  transform: scale(1.02);
+}
+
+.search-result-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  gap: 10px;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 500px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1d4ed8; /* azul */
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #cbd5e1; /* gris claro */
+}
+
+.search-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0f2c94; /* azul más oscuro */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #1d4ed8; /* azul medio */
+}
+
+.product-search-title {
+  color: black;
+}
+
+.product-search-price {
+  color: black !important;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  /* Tarjeta de producto */
+  .search-result-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .search-result-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Buscador */
+  .search-form {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .search-input {
+    max-width: 100%;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .search-button {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import database from "../../config/firebase";
-
+import "./SearchBar.css";
 
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,9 +14,9 @@ const SearchBar = () => {
 
     try {
       const q = query(
-        collection(database, "products"), 
+        collection(database, "products"),
         where("title", ">=", searchQuery),
-        where("title", "<=", searchQuery + "\uf8ff") 
+        where("title", "<=", searchQuery + "\uf8ff")
       );
 
       const querySnapshot = await getDocs(q);
@@ -32,25 +32,35 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="search-container">
+    <div className="search-bar-container">
+      {/* Formulario de búsqueda */}
+      <form onSubmit={handleSearch} className="search-form">
+  <input
+    type="text"
+    placeholder="Buscar productos, marcas o categorías..."
+    value={searchQuery}
+    onChange={(e) => setSearchQuery(e.target.value)}
+    className="search-input"
+  />
+  <button type="submit" className="search-button">
+    Buscar
+  </button>
+</form>
 
-      <form className="search" onSubmit={handleSearch}>
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Buscar productos, marcas o categorías…"
-        />
-        <button className="btn" type="submit">Buscar</button>
-      </form>
-
+      {/* Resultados */}
       <div className="results">
         {results.length > 0 ? (
           results.map((product) => (
-            <div key={product.id} className="product-card">
+            <div
+              key={product.id}
+              className="search-result-card"
+              onClick={() => (window.location.href = `/product/${product.id}`)}
+            >
               <img src={product.imgPrincipal} alt={product.title} />
-              <h3>{product.title}</h3>
-              <p>${product.price}</p>
+              <div>
+                <h3 className="product-search-title">{product.title}</h3>
+                <p className="product-search-price">${product.online_price}</p>
+              </div>
             </div>
           ))
         ) : (
@@ -62,3 +72,4 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+
